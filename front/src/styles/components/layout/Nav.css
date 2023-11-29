@@ -1,0 +1,47 @@
+nav {
+    background-color: #FF9D40;
+    /*rgb(243, 172, 39);*/
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    /* display:flex;*/
+    /* lo pongo en media screen*/
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+
+}
+
+nav ul li a:hover {
+    /* background-color: #FFB773;*/
+    color: #FFB773;
+}
+
+nav ul li a.activo {
+    background-color: #e76610;
+}
+
+/* Para pantallas que sean iguales o mayores a 480*/
+@media screen and (min-width: 480px) {
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        flex-grow: 1;
+    }
+
+
+}

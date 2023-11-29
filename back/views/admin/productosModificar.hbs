@@ -1,0 +1,79 @@
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        <h4>Modificar un Producto</h4>
+        <form action="/admin/productos/modificar" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="{{producto.id}}" name="id">
+            <div class="row mb-3">
+                <label for="labelTitulo" class="col-sm-2 col-form-label">Título</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control {{#if obj_error.error_titulo}}estilo_error{{/if}}"
+                        placeholder="Título" name="titulo" value="{{producto.titulo}}">
+                    {{#if obj_error.error_titulo}}
+                    <p class="error">{{obj_error.message_titulo}}</p>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="labelPrecio" class="col-sm-2 col-form-label">Precio</label>
+                <div class="col-sm-5">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control {{#if obj_error.error_precio}}estilo_error{{/if}}"
+                        aria-label="Amount (to the nearest dollar)" placeholder="Precio" name="precio"
+                        value="{{producto.precio}}">
+                    <span class="input-group-text">.00</span>
+                    <span class="input-group-text">$</span>
+                </div>
+                {{#if obj_error.error_precio}}
+                <p class="error">{{obj_error.message_precio}}</p>
+                {{/if}}
+                </div>                
+            </div>
+           <div class="row mb-3">
+                <label for="labelTipoRibbon" class="col-sm-2 col-form-label">Tipo Ribbon</label>
+                <div class="col-sm-5">
+                    <select class="form-select  {{#if obj_error.error_tipo_ribbon}}estilo_error{{/if}}"
+                        placeholder="Tipo Ribbon" name="tipo_ribbon" value="{{producto.tipo_ribbon}}">
+                        {{#each tipos_ribbon}}
+                              <option value="{{this.id}}" {{#if this.seleccionado}} selected {{/if}}>{{this.descripcion}}</option>
+                        {{/each}}
+                    </select>
+                    {{#if obj_error.error_tipo_ribbon}}
+                    <p class="error">{{obj_error.message_tipo_ribbon}}</p>
+                    {{/if}}
+                </div>
+            </div>     
+            <div class="row mb-3">
+                <label for="labelTextoRibbon" class="col-sm-2 col-form-label">Texto Ribbon</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control {{#if obj_error.error_texto_ribbon}}estilo_error{{/if}}"
+                        placeholder="Texto Ribbon" name="texto_ribbon" value="{{producto.texto_ribbon}}">
+                    {{#if obj_error.error_texto_ribbon}}
+                    <p class="error">{{obj_error.message_texto_ribbon}}</p>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="labelImagen" class="col-sm-2 col-form-label">Imagen</label>
+                <div class="col-sm-5">
+                    <input type="file" class="form-control {{#if obj_error.error_imagen}}estilo_error{{/if}}"
+                         name="imagen" id="imagen" value="{{producto.imagen}}"> 
+
+                    <label>
+                        <input type="checkbox" name="imagen_delete" id="imagen_delete" value="1"> Eliminar imagen actual?
+                    </label>                
+                   
+                    <input type="hidden" name="imagen_original" value="{{producto.imagen_id}}">                     
+                    {{#if obj_error.error_imagen_id}}
+                    <p class="error">{{obj_error.message_imagen}}</p>
+                    {{/if}}
+                </div>
+                
+            </div>
+            <button type="submit" class="btn  btn-primary">Modificar</button>
+            <a href="/admin/productos/" id="cancel" name="cancel" class="btn btn-primary">Cancel</a>
+        </form>
+        {{#if error}}
+            <p class="error">{{message}}</p>
+        {{/if}}
+    </div>
+</div>

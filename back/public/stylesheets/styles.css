@@ -1,0 +1,230 @@
+/*
+    font-family: 'Rubik', sans-serif;
+*/
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.imgLogo {
+    border-radius: 50%;
+    width: 70px;
+    box-shadow: 0 0 20px white;
+    /*rgba(241, 1, 1, 0.942);*/
+    /*%height: 50px;%*/
+}
+
+header {
+    /*
+    padding: 10px;
+    text-align: center;
+    background: #FF7C00;
+    height: fit-content;
+
+    overflow: hidden;*/
+
+    padding: 10px;
+    /*text-align: center;*/
+    background: #FF7C00;
+    height: fit-content;
+    vertical-align: middle;
+    text-align: center;
+
+
+    /*height: 15rem;*/
+}
+
+.header_logo_nombre {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    vertical-align: middle;
+    height: 80px;
+}
+
+header h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    font-style: bolder;
+    display: inline-block;
+   /* position: relative;*/
+    /*Flavia lo borra pero a mi me queda bien*/
+   /* bottom: 10px;*/
+    /*Flavia lo borra pero a mí me queda bien*/
+    margin-left: 30px;
+}
+
+
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #FFB773;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 20px;
+    /*color:white;*/
+    color: #BF6A30;
+}
+
+footer p {
+    font-size: 12 px;
+    color: #BF6A30;
+}
+
+h1 {
+    /* Lo agregué, no estaba en el front */
+    color: #BF6A30;
+    font-weight: 500;
+}
+
+h2 {
+    color: #BF6A30;
+    font-weight: 400;
+}
+
+p {
+    color: #BF6A30;
+    /* #8d734a;*/
+    font-weight: 300;
+}
+
+.error {
+    color: red;
+    font-weight: 400;
+    font-weight: 500;
+    font-style: bolder;
+}
+
+.text-end {
+    color: green;
+    font-weight: 400;
+    font-weight: 500;
+    font-style: bolder;
+    text-align: right;
+}
+
+.boton {
+    background: #FF9D40;
+    /*#FF7C00;#FF9D40;*/
+    box-shadow: 0 0 10 px rgba (0, 0, 0, 0.4);
+    color: white;
+    font-size: 16px;
+    padding: 9px 20px;
+    width: auto;
+    position: relative;
+    left: 5rem;
+    cursor: pointer;
+
+}
+
+.boton:hover {
+    background-color: #e76610;
+    /* #FF7C00;*/
+}
+
+.btn-stylish {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    /* Adjust the padding values as desired */
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    border: 2px solid #FF9D40;
+    /*#ff6347;*/
+    /* Set the border color as desired */
+    border-radius: 0.25rem;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #FF9D40;
+    /*#007bff;*/
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1;
+}
+
+.my-button {
+    background-color: #FF9D40;
+    /*#007bff;*/
+    color: #fff;
+    border-color: #ff6347;
+}
+
+.my-button2 {
+    background: #FF9D40;
+    /*#FF7C00;#FF9D40;*/
+    box-shadow: 0 0 10 px rgba (0, 0, 0, 0.4);
+    color: white;
+    font-size: 16px;
+    padding: 9px 20px;
+    width: auto;
+    position: relative;
+    left: 5rem;
+    cursor: pointer;
+    border: 2px solid #ff6347;
+    /* Set the border color as desired */
+
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #e76610;
+    /* #FF7C00;*/
+}
+
+.btn-stylish::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ff6347;
+    /* Set the border color as desired */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btn-stylish:hover {
+    /*background-color: transparent;*/
+    color: #e76610;
+    /*#007bff;*/
+}
+
+.btn-stylish:hover::before {
+    transform: translateX(0);
+}
+
+/* Stryles de errores - inicio*/
+.estilo_error {
+    border: 1px solid;
+    border-color: #c4c4c4;
+    outline: 2px solid red !important;
+    outline-offset: 1px;
+}
+/* Stryles de errores - fin*/
+
+/* Para pantallas que sean iguales o mayores a 480*/
+@media screen and (min-width: 480px) {
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        flex-grow: 1;
+    }
+
+
+}

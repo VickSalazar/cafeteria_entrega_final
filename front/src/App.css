@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=family=Rubik:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #BF6A30;
+    font-weight: 400;
+}
+
+h3 {
+    color: #BF6A30;
+    font-weight: 400;
+}
+
+p {
+    color: #BF6A30;
+    /* #8d734a;*/
+    font-weight: 300;
+}
+
+/*Animated switch apps comienzo*/
+.switch-wrapper {
+    position: relative;
+}
+
+.switch-wrapper>div {
+    position: absolute;
+}
+
+/*Animated switch apps fin*/

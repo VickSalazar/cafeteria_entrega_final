@@ -1,0 +1,107 @@
+.columnas_nosotros {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna_nosotros {
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+
+.columna_nosotros img {
+    /*
+    max-width: 240px;
+    max-height: 320px;*/
+    /*
+    max-width: 175px;
+    max-height: 234px;
+    */
+    /*
+    max-width: 166px;
+    max-height: 221px;
+    */
+    max-width: 50%;
+    max-height: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    /* border: 1px solid rgb(239, 29, 29); sólo para pruebas */
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+}
+
+.columna_nosotros img:hover {
+    transform: scale(1.1);
+}
+
+
+.columna_nosotros p {
+    /* border: 1px solid rgb(123, 158, 129); sólo para pruebas */
+    box-sizing: border-box;
+    /* font-size: 20px;*/
+}
+
+.columna_nosotros h3 {
+    font-weight: 400;
+    /*height: 15%;*/
+    box-sizing: content-box;
+}
+
+
+/* Para pantallas que sean iguales o mayores a 480*/
+@media screen and (min-width: 480px) {
+
+    .columnas_nosotros {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        flex-direction: row;
+
+    }
+
+    .columna_nosotros {
+        /* width: 14.28%; se desborda todo*/
+        width: 14.4%;
+        border: 1px solid #BF7630;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin: 5px; Si quiero despegar cada columna rectangulo con sus bordes. Pero quedan más elegante todas pegadas. */
+    }
+
+    .columna_nosotros img {
+        max-width: 95%;
+        max-height: 95%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        height: 150px;
+    }
+
+    .columna_nosotros h3 {
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .columna_nosotros p {
+        /*
+        height: 80px;
+        margin-top: 1px;
+        */
+        /*
+        height: 40px;
+        margin-top: 10px;
+        */
+        /*font-size: 20px;*/
+        height: 120px;
+
+        margin-top: 40px;
+        font-size: 16px;
+    }
+
+
+}
